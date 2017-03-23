@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Solon ICT</title>
     <meta name="author" content="Niels van Deursen" />
     <meta name="description" content="" />
@@ -14,27 +15,39 @@
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="menu">
       <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-right">
-          <li data-menuanchor="home-page"><a href="#home-page">Home</a></li>
-          <li data-menuanchor="diensten-page"><a href="#diensten-page">Diensten</a></li>
-          <li data-menuanchor="over-page"><a href="#over-page">Over</a></li>
-          <li data-menuanchor="contact-page"><a href="#contact-page">Contact</a></li>
-        </ul>
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li data-menuanchor="home"><a href="#home">Home</a></li>
+            <li data-menuanchor="diensten"><a href="#diensten">Diensten</a></li>
+            <li data-menuanchor="over"><a href="#over">Over</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
       </div>
     </nav>
 
     <div id="fullpage">
-      <div class="section" id="landing-section">
+      <div class="section" id="fpsection-home">
       </div>
-      <div class="section" id="about-section">
+      <div class="section" id="fpsection-diensten">
         <div class="landing-top"></div>
         <div class="landing-bot"></div>
       </div>
-      <div class="section" id="service-section">
+      <div class="section" id="fpsection-over">
         <div class="landing-top"></div>
         <div class="landing-bot"></div>
       </div>
-      <div class="section" id="contact-section">
+      <div class="section" id="fpsection-contact">
         <div class="landing-top"></div>
         <div class="landing-bot"></div>
       </div>
@@ -48,7 +61,7 @@
       $(document).ready(function() {
         $('#fullpage').fullpage({
           menu: '#menu',
-          anchors:['home-page', 'diensten-page', 'over-page', 'contact-page'],
+          anchors:['home', 'diensten', 'over', 'contact'],
           animateAnchor: true
         });
       });

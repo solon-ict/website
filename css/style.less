@@ -9,6 +9,7 @@
 @font-face {
     font-family: keepCalm;
     src: url("@{fonts}/keep-calm-medium.ttf");
+    font-size: 24px;
 }
 
 
@@ -16,6 +17,9 @@
 .navbar-default {
   background-color:rgba(0,0,0,0);
   border:none;
+  .navbar-nav {
+    margin-right: 40px;
+  }
   .navbar-nav li.active {
     a:hover, a:focus {
       background-color:rgba(0,0,0,0);
@@ -27,6 +31,7 @@
     }
   }
   .navbar-nav li {
+    margin-right: 20px;
     a:hover, a:focus {
       color: @navlink-hover;
     }
@@ -41,8 +46,7 @@
 }
 
 
-
-#landing-section {
+#fpsection-home {
   background: url("@{images}/lbg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -52,6 +56,7 @@
 
 .landing-top {
   height: 70%;
+  background: #2e2e2e;
 }
 
 .landing-bot {

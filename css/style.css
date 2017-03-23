@@ -1,10 +1,14 @@
 @font-face {
   font-family: keepCalm;
   src: url("../fonts/keep-calm-medium.ttf");
+  font-size: 24px;
 }
 .navbar-default {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+}
+.navbar-default .navbar-nav {
+  margin-right: 40px;
 }
 .navbar-default .navbar-nav li.active a:hover,
 .navbar-default .navbar-nav li.active a:focus {
@@ -14,6 +18,9 @@
 .navbar-default .navbar-nav li.active a {
   background-color: rgba(0, 0, 0, 0);
   color: #f3c13a;
+}
+.navbar-default .navbar-nav li {
+  margin-right: 20px;
 }
 .navbar-default .navbar-nav li a:hover,
 .navbar-default .navbar-nav li a:focus {
@@ -26,7 +33,7 @@
   padding-top: 0;
   color: white;
 }
-#landing-section {
+#fpsection-home {
   background: url("../images/lbg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -35,6 +42,7 @@
 }
 .landing-top {
   height: 70%;
+  background: #2e2e2e;
 }
 .landing-bot {
   height: 30%;
