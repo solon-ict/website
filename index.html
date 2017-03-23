@@ -15,7 +15,6 @@
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="menu">
       <div class="container-fluid">
-
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
             <span class="icon-bar"></span>
@@ -23,7 +22,6 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right">
             <li data-menuanchor="home"><a href="#home">Home</a></li>
@@ -32,7 +30,6 @@
             <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
           </ul>
         </div>
-
       </div>
     </nav>
 
@@ -64,6 +61,11 @@
           anchors:['home', 'diensten', 'over', 'contact'],
           animateAnchor: true
         });
+      });
+      $(document).on('click','.navbar-collapse.in',function(e) {
+          if( $(e.target).is('a') ) {
+              $(this).collapse('hide');
+          }
       });
     </script>
   </body>
