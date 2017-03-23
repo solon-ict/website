@@ -1,7 +1,27 @@
-#landing-page {
-  background: url("../images/landing-page-background.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.navbar-default {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.navbar-default .navbar-nav li.active a {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav li a {
+  line-height: 80px;
+  height: 80px;
+  padding-top: 0;
+  color: #292B2B;
+}
+#landing-section {
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+.landing-top {
+  height: 70%;
+}
+.landing-bot {
+  height: 30%;
+  background: rgba(0, 0, 0, 0.7);
 }
