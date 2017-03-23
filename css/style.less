@@ -1,55 +1,82 @@
 //out: style.css
 
-@images: "../images";
-@fonts: "../fonts";
+@images: '../images';
+@fonts: '../fonts';
 
-@navlink-normal: white;
-@navlink-hover: #f3c13a;
+@nav-link-color-base: white;
+@nav-link-color-active: #f3c13a;
+@nav-background-color: rgba(0,0,0,0);
+@nav-height: 80px;
 
 @font-face {
     font-family: keepCalm;
-    src: url("@{fonts}/keep-calm-medium.ttf");
+    src: url('@{fonts}/keep-calm-medium.ttf');
 }
 
 body {
-  font-size: 16px;
+  font-family: keepCalm;
+  font-size: 14px;
 }
 
+#map {
+  width: 100%;
+  height: 40%;
+  background-color: grey;
+}
+.contact-container {
+  height: 60%;
+}
 // Bootstrap overrides.
 .navbar-default {
-  background-color:rgba(0,0,0,0);
+  background-color: @nav-background-color;
   border:none;
   .navbar-nav {
     margin-right: 40px;
   }
   .navbar-nav li.active {
-    a:hover, a:focus {
-      background-color:rgba(0,0,0,0);
-      color:@navlink-hover;
-    }
+    a:hover,
+    a:focus,
     a {
-      background-color:rgba(0,0,0,0);
-      color: @navlink-hover;
+      background-color: @nav-background-color;
+      color: @nav-link-color-active;
     }
   }
   .navbar-nav li {
     margin-right: 20px;
-    a:hover, a:focus {
-      color: @navlink-hover;
+    a:hover,
+    a:focus {
+      color: @nav-link-color-active;
     }
     a {
-      font-family:keepCalm;
-      line-height:80px;
-      height:80px;
-      padding-top:0;
-      color: @navlink-normal;
+      font-family: keepCalm;
+      line-height: @nav-height;
+      height: @nav-height;
+      padding-top: 0;
+      color: @nav-link-color-base;
     }
   }
 }
 
+footer {
+  background-color: #2e2e2e;
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 75px;
+    margin-bottom: 0;
+  }
+}
+
+.section {
+  background-color: #2e2e2e;
+}
 
 #fpsection-home {
-  background: url("@{images}/lbg.jpg") no-repeat center center fixed;
+  background: url('@{images}/lbg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

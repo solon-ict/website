@@ -8,9 +8,9 @@
     <meta name="description" content="" />
     <meta name="keywords"  content="solon,ict,it" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" id="menu">
@@ -45,10 +45,14 @@
         <div class="landing-bot"></div>
       </div>
       <div class="section" id="fpsection-contact">
-        <div class="landing-top"></div>
-        <div class="landing-bot"></div>
+        <div class="contact-container"></div>
+        <div id="map"></div>
+        <footer>
+          <p>Copyright © Solon ICT. Alle Rechten Voorbehouden</p>
+        </footer>
       </div>
     </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -59,7 +63,10 @@
         $('#fullpage').fullpage({
           menu: '#menu',
           anchors:['home', 'diensten', 'over', 'contact'],
-          animateAnchor: true
+          animateAnchor: false,
+          autoScrolling: false,
+          fitToSection: false
+
         });
       });
       $(document).on('click','.navbar-collapse.in',function(e) {
@@ -67,6 +74,30 @@
               $(this).collapse('hide');
           }
       });
+    </script>
+    <script>
+      function initMap() {
+        var solon = {lat: 51.319732, lng: 5.812311};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: solon
+        });
+        var contentString = '<div id="content"><h1>Nieuwebaan 8a, 6036RD Ospel </h1></div>';
+        var infoWindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        var marker = new google.maps.Marker({
+          position: solon,
+          map: map,
+          title: 'Solon ICT'
+        });
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
     </script>
   </body>
 
