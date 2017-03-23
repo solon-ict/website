@@ -15,8 +15,9 @@
     <nav class="navbar navbar-default navbar-fixed-top" id="menu">
       <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
-          <li data-menuanchor="about-page"><a href="#about-page">About</a></li>
-          <li data-menuanchor="service-page"><a href="#service-page">Service</a></li>
+          <li data-menuanchor="home-page"><a href="#home-page">Home</a></li>
+          <li data-menuanchor="diensten-page"><a href="#diensten-page">Diensten</a></li>
+          <li data-menuanchor="over-page"><a href="#over-page">Over</a></li>
           <li data-menuanchor="contact-page"><a href="#contact-page">Contact</a></li>
         </ul>
       </div>
@@ -24,8 +25,6 @@
 
     <div id="fullpage">
       <div class="section" id="landing-section">
-        <div class="landing-top"></div>
-        <div class="landing-bot"></div>
       </div>
       <div class="section" id="about-section">
         <div class="landing-top"></div>
@@ -49,7 +48,7 @@
       $(document).ready(function() {
         $('#fullpage').fullpage({
           menu: '#menu',
-          anchors:['landing-page', 'about-page', 'service-page', 'contact-page'],
+          anchors:['home-page', 'diensten-page', 'over-page', 'contact-page'],
           animateAnchor: true
         });
       });

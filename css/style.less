@@ -3,26 +3,45 @@
 @images: "../images";
 @fonts: "../fonts";
 
+@font-face {
+    font-family: keepCalm;
+    src: url("@{fonts}/keep-calm-medium.ttf");
+}
+
 
 // Bootstrap overrides.
 .navbar-default {
   background-color: rgba(0,0,0,0);
   border: none;
 
-  .navbar-nav li.active a {
-    background-color: rgba(0,0,0,0) !important;
+  .navbar-nav li.active {
+    a {
+      background-color: rgba(0,0,0,0) !important;
+      color: #f3c13a;
+      &:hover, &:focus {
+        color: #f3c13a;
+      }
+    }
   }
   .navbar-brand,
-  .navbar-nav li a {
+  .navbar-nav li
+  {
+    a {
+      font-family: keepCalm;
       line-height: 80px;
       height: 80px;
       padding-top: 0;
-      color: #292B2B;
+      color: white;
+      &:hover, &:focus {
+        color: #f3c13a;
+      }
+    }
+
   }
 }
 
 #landing-section {
-  //background: url("@{images}/landing-page-background.jpg") no-repeat center center fixed !important;
+  background: url("@{images}/lbg.jpg") no-repeat center center fixed !important;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
