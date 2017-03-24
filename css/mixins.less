@@ -1,0 +1,15 @@
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+.prefix(@property, @value, @vendors) {
+    .iter(length(@vendors));
+
+    .iter(@i) when (@i > 0) {
+        .iter(@i - 1);
+        @vendor: extract(@vendors, @i);
+        -@{vendor}-@{property}: @value;
+    }
+    @{property}: @value;
+}
