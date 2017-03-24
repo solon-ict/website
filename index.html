@@ -46,7 +46,9 @@
       </div>
       <div class="section" id="fpsection-contact">
         <div class="contact-container"></div>
-        <div id="map"></div>
+        <div class="google-map"></div>
+      </div>
+      <div class="section fp-auto-height" id="fpsection-footer">
         <footer>
           <p>Copyright © Solon ICT. Alle Rechten Voorbehouden</p>
         </footer>
@@ -58,14 +60,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/google-map.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $('#fullpage').fullpage({
           menu: '#menu',
-          anchors:['home', 'diensten', 'over', 'contact'],
-          animateAnchor: false,
-          autoScrolling: false,
-          fitToSection: false
+          anchors:['home', 'diensten', 'over', 'contact', 'footer']
 
         });
       });
@@ -74,27 +74,6 @@
               $(this).collapse('hide');
           }
       });
-    </script>
-    <script>
-      function initMap() {
-        var solon = {lat: 51.319732, lng: 5.812311};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: solon
-        });
-        var contentString = '<div id="content"><h1>Nieuwebaan 8a, 6036RD Ospel </h1></div>';
-        var infoWindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-        var marker = new google.maps.Marker({
-          position: solon,
-          map: map,
-          title: 'Solon ICT'
-        });
-        marker.addListener('click', function() {
-          infoWindow.open(map, marker);
-        });
-      }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB-fqDizqrVBBHFLfSwrDUnSToP5c7oHs&callback=initMap">

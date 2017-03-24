@@ -1,12 +1,14 @@
 //out: style.css
+@import 'mixins';
 
 @images: '../images';
 @fonts: '../fonts';
 
 @nav-link-color-base: white;
 @nav-link-color-active: #f3c13a;
-@nav-background-color: rgba(0,0,0,0);
+@nav-background-color: rgba(0, 0, 0, 0);
 @nav-height: 80px;
+@footer-height: 80px;
 
 @font-face {
     font-family: keepCalm;
@@ -18,56 +20,76 @@ body {
   font-size: 14px;
 }
 
-#map {
-  width: 100%;
-  height: 40%;
-  background-color: grey;
+
+
+
+
+a {
+  color: @nav-link-color-base;
+  font-size: 14px;
+  &:focus,
+  &:hover {
+    color: @nav-link-color-active;
+  }
 }
-.contact-container {
-  height: 60%;
-}
+
+
 // Bootstrap overrides.
 .navbar-default {
   background-color: @nav-background-color;
-  border:none;
-  .navbar-nav {
-    margin-right: 40px;
+  border: none;
+
+  .navbar-collapse ul li a {
+    height: @nav-height / 2;
+    line-height: @nav-height / 2;
   }
-  .navbar-nav li.active {
-    a:hover,
-    a:focus,
-    a {
+
+  .navbar-nav {
+    li {
+      margin-right: 20px;
+
+      a:extend(a all) {
+        height: @nav-height;
+        line-height: @nav-height;
+
+        &:focus,
+        &:hover {
+          color: @nav-link-color-active;
+        }
+      }
+    }
+
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
       background-color: @nav-background-color;
       color: @nav-link-color-active;
     }
   }
-  .navbar-nav li {
-    margin-right: 20px;
-    a:hover,
-    a:focus {
-      color: @nav-link-color-active;
-    }
-    a {
-      font-family: keepCalm;
-      line-height: @nav-height;
-      height: @nav-height;
-      padding-top: 0;
-      color: @nav-link-color-base;
-    }
-  }
+}
+
+.google-map {
+  background-color: grey;
+  height: 30%;
+  width: 100%;
+}
+
+.contact-container {
+  width: 100%;
+  height: 70%;
 }
 
 footer {
   background-color: #2e2e2e;
   color: white;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+  height: @footer-height;
   text-align: center;
+  width: 100%;
+
   p {
+    height: 100%;
+    line-height: @footer-height;
     font-family: 'Open Sans', sans-serif;
-    line-height: 75px;
-    margin-bottom: 0;
   }
 }
 
@@ -76,19 +98,19 @@ footer {
 }
 
 #fpsection-home {
-  background: url('@{images}/lbg.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-background-size: cover;
+  background: url('@{images}/lbg.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
 .landing-top {
-  height: 70%;
   background: #2e2e2e;
+  height: 70%;
 }
 
 .landing-bot {
-  height: 30%;
   background: rgba(0, 0, 0, 0.7);
+  height: 30%;
 }
