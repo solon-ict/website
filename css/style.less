@@ -10,13 +10,16 @@
 @nav-height: 80px;
 @footer-height: 80px;
 
+
+
 @font-face {
     font-family: keepCalm;
     src: url('@{fonts}/keep-calm-medium.ttf');
 }
 
 body {
-  font-family: keepCalm;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
   font-size: 14px;
 }
 
@@ -26,7 +29,7 @@ body {
 
 a {
   color: @nav-link-color-base;
-  font-size: 14px;
+
   &:focus,
   &:hover {
     color: @nav-link-color-active;
@@ -51,11 +54,6 @@ a {
       a:extend(a all) {
         height: @nav-height;
         line-height: @nav-height;
-
-        &:focus,
-        &:hover {
-          color: @nav-link-color-active;
-        }
       }
     }
 
@@ -71,12 +69,15 @@ a {
 .google-map {
   background-color: grey;
   height: 30%;
-  width: 100%;
 }
 
 .contact-container {
-  width: 100%;
+  padding-top: @nav-height;
   height: 70%;
+  > .row {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 footer {
@@ -84,12 +85,9 @@ footer {
   color: white;
   height: @footer-height;
   text-align: center;
-  width: 100%;
 
   p {
-    height: 100%;
     line-height: @footer-height;
-    font-family: 'Open Sans', sans-serif;
   }
 }
 
@@ -98,11 +96,8 @@ footer {
 }
 
 #fpsection-home {
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
+  .prefix(background-size, cover, moz o webkit);
   background: url('@{images}/lbg.jpg') no-repeat center center fixed;
-  background-size: cover;
 }
 
 .landing-top {

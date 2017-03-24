@@ -3,13 +3,13 @@
   src: url('../fonts/keep-calm-medium.ttf');
 }
 body {
-  font-family: keepCalm;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
   font-size: 14px;
 }
 a,
 .navbar-default .navbar-nav li a {
   color: white;
-  font-size: 14px;
 }
 a:focus,
 a:hover,
@@ -33,12 +33,6 @@ a:hover,
   height: 80px;
   line-height: 80px;
 }
-.navbar-default .navbar-nav li a:focus,
-.navbar-default .navbar-nav li a:hover,
-.navbar-default .navbar-nav li .navbar-default .navbar-nav li a:focus,
-.navbar-default .navbar-nav li .navbar-default .navbar-nav li a:hover {
-  color: #f3c13a;
-}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -51,23 +45,23 @@ a:hover,
 .google-map {
   background-color: grey;
   height: 30%;
-  width: 100%;
 }
 .contact-container {
-  width: 100%;
+  padding-top: 80px;
   height: 70%;
+}
+.contact-container > .row {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 footer {
   background-color: #2e2e2e;
   color: white;
   height: 80px;
   text-align: center;
-  width: 100%;
 }
 footer p {
-  height: 100%;
   line-height: 80px;
-  font-family: 'Open Sans', sans-serif;
 }
 .section {
   background-color: #2e2e2e;
@@ -76,8 +70,8 @@ footer p {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  background: url('../images/lbg.jpg') no-repeat center center fixed;
   background-size: cover;
+  background: url('../images/lbg.jpg') no-repeat center center fixed;
 }
 .landing-top {
   background: #2e2e2e;
