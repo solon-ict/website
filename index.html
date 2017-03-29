@@ -16,13 +16,14 @@
   <body id="page-top">
 
     <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <a class="navbar-brand page-scroll sr-icons" href="page-top">Solon</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right">
@@ -45,7 +46,7 @@
       </div>
       <div class="header-scroll-button">
         <a class="page-scroll" href="#diensten">
-          <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+          <i class="fa fa-angle-double-down sr-icons" aria-hidden="true"></i>
         </a>
       </div>
     </header>
@@ -65,7 +66,7 @@
             <div class="service-box">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <i class="fa fa-2x fa-server sr-icons" aria-hidden="true"></i>
+                  <i class="fa fa-3x fa-server sr-icons" aria-hidden="true"></i>
                 </div>
                 <div class="panel-body">
                   <h3>Server Beheer</h3>
@@ -78,7 +79,7 @@
             <div class="service-box">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <i class="fa fa-2x fa-save sr-icons" aria-hidden="true"></i>
+                  <i class="fa fa-3x fa-save sr-icons" aria-hidden="true"></i>
                 </div>
                 <div class="panel-body">
                   <h3>Backups</h3>
@@ -91,7 +92,7 @@
             <div class="service-box">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <i class="fa fa-2x fa-desktop sr-icons" aria-hidden="true"></i>
+                  <i class="fa fa-3x fa-desktop sr-icons" aria-hidden="true"></i>
                 </div>
                 <div class="panel-body">
                   <h3>Werkplek Beheer</h3>
@@ -104,7 +105,7 @@
             <div class="service-box">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <i class="fa fa-2x fa-refresh sr-icons" aria-hidden="true"></i>
+                  <i class="fa fa-3x fa-refresh sr-icons" aria-hidden="true"></i>
                 </div>
                 <div class="panel-body">
                   <h3>Onderhoud</h3>
@@ -120,12 +121,6 @@
     <section class="bg-primary" id="portfolio">
       <div class="container-fluid">
         <div class="row no-gutter">
-          <!--
-          <div class="col-lg-12">
-            <h4>Met de volgende klanten hebben wij al succesvol samengewerkt. Ben jij de volgende?</h4>
-            <hr />
-          </div>
-          -->
           <div class="col-lg-5ths col-md-5ths col-sm-6 col-xs-6">
             <a href="images/portfolio/template.jpg" class="portfolio-box">
               <!-- <img src="images/portfolio/temfplate.jpg" class="img-responsive" alt="Klant"> -->
@@ -225,40 +220,71 @@
     </section>
 
 
+    <section class="bg-light contact-container" id="contact">
 
-    <section id="contact">
+      <div class="container-fluid">
+        <div class="row no-gutter">
+          <div class="col-lg-12">
+            <div class="google-map"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
-            <h3>Heeft u vragen?</h3>
-            <form>
+          <div class="col-lg-12 text-center">
+            <h1 class="section-heading">Neem contact op</h1>
+            <hr />
+          </div>
+        </div>
+      </div>
+    -->
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-7 col-lg-offset-1">
+            <form class="contact-form">
               <div class="row">
+                <div class="col-lg-12">
+                  <h2 class="section-heading">Vragen of opmerkingen</h2>
+                </div>
                 <div class="form-group col-md-12">
                   <input type="text" class="form-control" id="contact-name-field" placeholder="Naam">
                 </div>
-              </div>
-              <div class="row">
                 <div class="form-group col-md-6">
                   <input type="email" class="form-control" id="contact-email-field" placeholder="E-mail">
                 </div>
                 <div class="form-group col-md-6">
                   <input type="tel" class="form-control" id="contact-tel-field" placeholder="Telefoonnummer">
                 </div>
-              </div>
-              <div class="row">
                 <div class="form-group col-md-12">
-                  <textarea class="form-control" id="contact-message-field" placeholder="Uw bericht..." rows="5"></textarea>
+                  <textarea class="form-control" id="contact-message-field" placeholder="Uw bericht..." rows="7"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary pull-right">Submit</button>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-4">
+            <row>
+              <div class="col-lg-12"><h2 class="section-heading">Gegevens</h2></div>
+              <div class="col-lg-12">
+                <h4>Adres</h4>
+                <p> Solon ICT Beheer <br> Nieuwebaan 8a <br> 6036 RD Ospel, Nederland </p>
+              </div>
+              <div class="col-lg-12 text-right">
+                <h4>Bedrijf</h4>
+                <p><strong>Telefoon: </strong> 0612345678 <br>
+                <strong>KVK: </strong> 00000000 <br>
+                <strong>IBAN: </strong> NL13SOLO0385583842 <br>
+                <strong>BTW: </strong> NL8053.63.555</p>
+              </div>
+            </row>
           </div>
         </div>
       </div>
-    </section>
-    <section class="google-map">
     </section>
     <footer>
       <p>Copyright © Solon ICT. Alle Rechten Voorbehouden</p>

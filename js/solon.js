@@ -22,6 +22,11 @@ $(document).on('click', 'a.page-scroll', function(event) {
     event.preventDefault();
 });
 
+$('body').scrollspy({
+    target: '#navigation',
+    offset: 54
+});
+
 // Make the navbar collapse when a link is clicked.
 $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') ) {
@@ -37,3 +42,10 @@ $(window).scroll(function() {
         $("#navigation").removeClass("navbar-shrink");
     }
 });
+
+window.sr = ScrollReveal();
+sr.reveal('.sr-icons', {
+    duration: 600,
+    scale: 0.3,
+    distance: '0px'
+}, 200);

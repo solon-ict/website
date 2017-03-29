@@ -52,9 +52,15 @@ section {
   }
 }
 
+section#portfolio {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 nav.navbar-default.navbar-shrink {
   background-color: darken(@color-base, 90%);
   .transition-all;
+
   @media(min-width: 768px) {
     .nav > li > a,
     .nav > li > a:focus {
@@ -65,7 +71,7 @@ nav.navbar-default.navbar-shrink {
   }
 }
 
-.navbar-default {
+nav.navbar-default {
   background-color: @nav-background-color;
   border: none;
   .transition-all;
@@ -188,6 +194,9 @@ header {
   .fa {
     color: @color-primary;
   }
+  .panel {
+    border-radius: 0;
+  }
 }
 
 .portfolio-box {
@@ -219,8 +228,6 @@ header {
       font-size: 45px;
   }
 
-
-
   & {
     text-decoration: none !important;
     &:hover {
@@ -232,12 +239,36 @@ header {
   }
 }
 
+.contact-container {
+  padding-top: 0;
+  .google-map {
+    background-color: grey;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+}
 
+.contact-form {
+  input,
+  textarea {
+    border-radius: 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+  input {
+    height: 40px;
+  }
+}
 
 
 
 .bg-primary {
   background-color: darken(@color-base, 90%);
+  h1,h2,h3,h4,h5,h6 {
+    color: white;
+  }
 }
 
 .bg-light {
@@ -245,8 +276,7 @@ header {
 }
 
 .google-map {
-  background-color: grey;
-  height: 30%;
+
 }
 
 footer {
@@ -273,6 +303,22 @@ footer {
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
+}
+
+.btn-default {
+    .button-variant(darken(@color-base, 80%);white;white);
+}
+
+.btn-primary {
+    .button-variant(white;@color-primary;@color-primary);
+}
+
+.btn {
+    .sans-serif-font;
+    border: none;
+    border-radius: 0;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .col-xs-5ths,
