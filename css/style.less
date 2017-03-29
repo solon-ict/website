@@ -107,6 +107,21 @@ header {
   text-align: center;
   color: white;
 
+  .header-scroll-button {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 100px;
+    > a {
+      color: white;
+      .transition-all;
+      &:hover, &:focus {
+        color: @color-primary;
+      }
+    }
+  }
+
   .header-content {
     position: relative;
     text-align: center;
@@ -131,6 +146,22 @@ header {
 
   @media (min-width: 768px) {
         min-height: 100%;
+
+        .header-scroll-button {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          text-align: center;
+          font-size: 100px;
+          > a {
+            color: white;
+            .transition-all;
+            &:hover, &:focus {
+              color: @color-primary;
+            }
+          }
+        }
+
         .header-content {
             position: absolute;
             top: 50%;

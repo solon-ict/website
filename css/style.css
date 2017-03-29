@@ -111,6 +111,23 @@ header {
   text-align: center;
   color: white;
 }
+header .header-scroll-button {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-size: 100px;
+}
+header .header-scroll-button > a {
+  color: white;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+header .header-scroll-button > a:hover,
+header .header-scroll-button > a:focus {
+  color: #f3c13a;
+}
 header .header-content {
   position: relative;
   text-align: center;
@@ -133,6 +150,23 @@ header .header-content .header-content-inner p {
 @media (min-width: 768px) {
   header {
     min-height: 100%;
+  }
+  header .header-scroll-button {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 100px;
+  }
+  header .header-scroll-button > a {
+    color: white;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  header .header-scroll-button > a:hover,
+  header .header-scroll-button > a:focus {
+    color: #f3c13a;
   }
   header .header-content {
     position: absolute;
