@@ -10,6 +10,11 @@ body {
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
+hr {
+  border-color: #f3c13a;
+  border-width: 3px;
+  max-width: 50px;
+}
 p {
   font-size: 16px;
   line-height: 1.5;
@@ -31,9 +36,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
+  color: #757D75;
 }
 section {
+  padding-top: 100px;
+  padding-bottom: 100px;
   width: 100%;
 }
 nav.navbar-default.navbar-shrink {
@@ -191,32 +198,49 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
 }
+.service-box {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 50px auto 0;
+}
+.service-box .fa {
+  font-size: 65px;
+  color: #f3c13a;
+}
 .portfolio-box {
   width: 100%;
-  height: 100%;
+  height: 200px;
   position: relative;
   display: block;
   max-width: 650px;
   margin: 0 auto;
+  background: transparent;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
+  text-decoration: none !important;
 }
-.portfolio-box img {
-  width: 100%;
-  height: auto;
-}
-.portfolio-box .portfolio-box-inner {
+.portfolio-box .portfolio-box-inner,
+.portfolio-box .portfolio-box-outer {
   width: 100%;
   height: 100%;
+  position: absolute;
+}
+.portfolio-box .portfolio-box-inner {
   opacity: 0;
   background: rgba(243, 193, 58, 0.9);
-  display: block;
-  position: absolute;
-  bottom: 0;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
+}
+.portfolio-box .portfolio-box-outer p {
+  text-align: center;
+  line-height: 200px;
+  font-size: 45px;
+}
+.portfolio-box:hover {
+  color: white !important;
 }
 .portfolio-box:hover .portfolio-box-inner {
   opacity: 1;
@@ -225,7 +249,7 @@ header .header-content .header-content-inner p {
   background-color: #191919;
 }
 .bg-light {
-  background-color: #cccccc;
+  background-color: white;
 }
 .google-map {
   background-color: grey;
@@ -244,6 +268,9 @@ footer p {
 }
 .section {
   background-color: #2e2e2e;
+}
+.section-heading {
+  margin-top: 0;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
