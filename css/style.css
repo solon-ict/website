@@ -39,9 +39,15 @@ h6 {
   color: #757D75;
 }
 section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 nav.navbar-default.navbar-shrink {
   background-color: #191919;
@@ -122,8 +128,7 @@ header .header-scroll-button {
   width: 100%;
   position: absolute;
   bottom: 0;
-  text-align: center;
-  font-size: 100px;
+  font-size: 50px;
 }
 header .header-scroll-button > a {
   color: white;
@@ -136,8 +141,6 @@ header .header-scroll-button > a:focus {
   color: #f3c13a;
 }
 header .header-content {
-  position: relative;
-  text-align: center;
   padding: 100px 15px 100px;
   width: 100%;
 }
@@ -160,21 +163,7 @@ header .header-content .header-content-inner p {
     min-height: 100%;
   }
   header .header-scroll-button {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
     font-size: 100px;
-  }
-  header .header-scroll-button > a {
-    color: white;
-    -webkit-transition: all 0.35s;
-    -moz-transition: all 0.35s;
-    transition: all 0.35s;
-  }
-  header .header-scroll-button > a:hover,
-  header .header-scroll-button > a:focus {
-    color: #f3c13a;
   }
   header .header-content {
     position: absolute;
@@ -190,14 +179,10 @@ header .header-content .header-content-inner p {
     margin-right: auto;
   }
   header .header-content .header-content-inner h1 {
-    color: white;
     font-size: 150px;
   }
   header .header-content .header-content-inner p {
     font-size: 18px;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 .service-box {
@@ -207,7 +192,6 @@ header .header-content .header-content-inner p {
   margin: 50px auto 0;
 }
 .service-box .fa {
-  font-size: 65px;
   color: #f3c13a;
 }
 .portfolio-box {
