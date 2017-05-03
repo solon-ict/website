@@ -64,3 +64,24 @@
 		background-color: @color;
 	}
 }
+
+.set-theme-color(@color) {
+  h3,
+  .fa {
+    color: @color;
+  }
+
+  hr {
+    border-color: @color;
+  }
+
+  .form-control {
+    &:focus {
+      border-color: @color;
+    }
+  }
+
+  .btn-primary {
+      .button-variant(white; @color; @color);
+  }
+}

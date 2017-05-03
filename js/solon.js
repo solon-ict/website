@@ -43,9 +43,42 @@ $(window).scroll(function() {
     }
 });
 
+function scaleGoogleMap() {
+  var contactSection = $(".contact-section");
+  var googleMap = $(".google-map");
+  if (contactSection.width() >= 751) {
+    googleMap.height(contactSection.height());
+  }
+  else {
+    googleMap.height('300px');
+  }
+}
+
+$(window).on('resize', scaleGoogleMap);
+$(document).ready(scaleGoogleMap);
+
+
+
 window.sr = ScrollReveal();
-sr.reveal('.sr-icons', {
+
+// Service icons.
+sr.reveal('.service-box .icon-reveal', {
+    viewOffset: { top: 80, right: 0, bottom: 0, left: 0 },
     duration: 600,
+    reset: true,
     scale: 0.3,
     distance: '0px'
+}, 200);
+
+sr.reveal('.header-scroll-button .icon-reveal', {
+    viewOffset: { top: 80, right: 0, bottom: 0, left: 0 },
+    duration: 600,
+    reset: true,
+    scale: 0.3,
+    distance: '0px'
+}, 200);
+
+sr.reveal('.sr-logo', {
+  duration: 600,
+  viewOffset: { top: 0, right: 0, bottom: 0, left: 20 }
 }, 200);
