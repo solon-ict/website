@@ -1,19 +1,4 @@
 
-
-
-// Initialize fullpage.
-/* $(document).ready(function() {
-  $('#fullpage').fullpage({
-    menu: '#menu',
-    anchors:['home', 'diensten', 'portfolio', 'over', 'contact', 'footer'],
-    autoScrolling: false,
-    fitToSection: false,
-    paddingTop: '50px',
-		fixedElements: '#menu',
-    scrollBar: false
-  });
-}); */
-
 $(document).on('click', 'a.page-scroll', function(event) {
     var $anchor = $(this);
     $('html, body').stop().animate({
@@ -44,7 +29,7 @@ $(window).scroll(function() {
 });
 
 function scaleGoogleMap() {
-  var contactSection = $(".contact-section");
+  var contactSection = $(".contact-page");
   var googleMap = $(".google-map");
   if (contactSection.width() >= 751) {
     googleMap.height(contactSection.height());
