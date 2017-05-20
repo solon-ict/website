@@ -268,6 +268,36 @@ header .header-scroll-button > a:focus {
 .clients-page .client-box:hover .client-box-inner {
   opacity: 1;
 }
+.about-page {
+  background: #eeeeee !important;
+}
+.about-page .team-member-image img {
+  border: 2px solid #E73C4E;
+}
+.about-page ul {
+  list-style: none;
+  padding-left: 0;
+}
+.about-page ul li {
+  display: inline-block;
+}
+.about-page ul li a {
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #222222;
+}
+.about-page ul li a:hover {
+  background: #E73C4E;
+}
+.about-page ul li a:hover .fa {
+  color: black;
+}
+.img-round {
+  border-radius: 50%;
+}
 /* PARTNERS */
 .partners-page .partner-box {
   text-align: center;
