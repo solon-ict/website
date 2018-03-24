@@ -272,6 +272,42 @@ header {
   }
 }
 
+.about-page {
+
+  background: @gray-lighter !important;
+  .team-member-image img {
+    border: 2px solid @color-primary;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background: @gray-darker;
+
+        &:hover {
+          .fa {
+            color: black;
+          }
+          background: @color-primary;
+        }
+      }
+
+    }
+  }
+}
+
+.img-round {
+  border-radius: 50%;
+}
+
 
 /* PARTNERS */
 .partners-page {
